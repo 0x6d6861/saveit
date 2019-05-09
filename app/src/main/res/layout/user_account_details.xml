@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:background="@android:color/white">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/elon"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FFFFFF" android:layout_marginStart="24dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image" android:gravity="center"
+            android:layout_marginBottom="32dp" app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+                android:text="Expected Savings after 52 weeks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView5" android:layout_marginBottom="8dp"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:gravity="center">
+            <TextView
+                    android:text="KES"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView6" android:textSize="14sp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Overline"/>
+            <TextView
+                    android:text="123, 556"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/total_saving" android:gravity="center"
+                    android:textSize="36sp" android:textAppearance="@style/TextAppearance.AppCompat.Display4"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/profile_image"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+            app:layout_constraintStart_toEndOf="@+id/profile_image" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp">
+        <TextView
+                android:text="Elon Musk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>
+        <TextView
+                android:text="musk@spacex.co"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+        />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
