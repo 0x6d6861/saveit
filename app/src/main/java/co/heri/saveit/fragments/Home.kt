@@ -104,19 +104,21 @@ class Home : Fragment() {
 
                 if(!s.isNullOrEmpty()){
 
-                    var amount = s.toString().toBigDecimal()
+                    var amount = s.toString().toBigInteger()
 
-                    if(!(amount >= 0.toBigDecimal() && amount <= 50000000.toBigDecimal())){
+                    if(!(amount >= 0.toBigInteger() && amount <= 50000000.toBigInteger())){
                         (view.findViewById<TextInputLayout>(R.id.amount_layout)).error = "Invalid amount enters"
                         return
                     } else {
                         (view.findViewById<TextInputLayout>(R.id.amount_layout)).error = null
                     }
 
+                    if(amount == 0.toBigInteger()){
+
+                    }
+
                     weekAdapter.recalculate(s.toString().toInt())
 
-
-                    var last_week = weeks_list.get(weeks_list.size - 1)
 
 
                     total_saving.setText(weeks.last().total.toString())
